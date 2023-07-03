@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QStackedWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>708</width>
+    <height>451</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图书管理系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    border-radius: 5px;
+    background-color: rgb(64, 158, 255);
+    color: white;
+    min-height: 25px;
+    max-height: 25px;
+    min-width: 70px;
+    max-width: 70px;
+}
+QPushButton:hover {
+    background-color: rgb(102, 177, 255);
+}
+
+#m_welcomeWidget {
+    background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="m_welcomeWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>黑体</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>欢迎使用图书管理系统</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_readerLoginButton">
+        <property name="text">
+         <string>读者登录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_administerLoginButton">
+        <property name="text">
+         <string>管理员登录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="ReaderLoginWidget" name="m_readerLoginWidget"/>
+  <widget class="AdministerLoginWidget" name="m_administerLoginWidget"/>
+  <widget class="BorrowWidget" name="m_borrowWidget"/>
+  <widget class="RegisterWidget" name="m_registerWidget"/>
+  <widget class="AdminWidget" name="m_adminWidget"/>
+  <widget class="AddBookWidget" name="m_addBookWidget"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ReaderLoginWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/readerloginwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AdministerLoginWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/administerloginwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BorrowWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/borrowwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RegisterWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/registerwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AdminWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/adminwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AddBookWidget</class>
+   <extends>QWidget</extends>
+   <header>widget/addbookwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
